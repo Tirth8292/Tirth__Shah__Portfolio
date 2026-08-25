@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: tirth-portfolio-web
+    runtime: node
+    plan: free
+    buildCommand: node --version
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: commit

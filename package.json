@@ -1,0 +1,13 @@
+{
+  "name": "tirth-shah-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tirth Shah portfolio web service",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}

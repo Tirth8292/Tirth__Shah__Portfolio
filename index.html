@@ -445,7 +445,7 @@
               <h3>Olist Marketplace Analytics Engineering Platform</h3>
               <p>Full ETL pipeline (extract &rarr; stage &rarr; star schema &rarr; API) across 9 datasets covering 99,000+ orders and 3,000+ sellers. Real Brazilian marketplace data turned into a modeled warehouse with engineered business metrics and live APIs.</p>
               <div class="highlight"><i class="fa-solid fa-bolt"></i> Weighted seller scoring model (0–100) + RFM segmentation for ~93,000 customers, exposed via 10+ documented FastAPI endpoints across 3 services.</div>
-              <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Power BI</span><span class="tag">Star Schema</span><span class="tag">dbt</span><span class="tag">Airflow</span></div>
+              <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQL Server</span><span class="tag">Power BI</span><span class="tag">Star Schema</span><span class="tag">dbt</span><span class="tag">Airflow</span></div>
             </div>
             <div class="card-actions">
               <button class="action primary" onclick="openModal('olist')"><i class="fa-solid fa-eye"></i> View Details</button>
@@ -491,8 +491,8 @@
             <div class="card-body">
               <h3>PharmaLink &ndash; Full-Stack Healthcare Platform</h3>
               <p>Role-based healthcare platform connecting patients and doctors through separate portals. Built and presented at <strong>MECIA HACK 2.0, SVIT</strong>.</p>
-              <div class="highlight"><i class="fa-solid fa-bolt"></i> Doctor appointment booking, medicine ordering, lab test scheduling, prescription uploads, order tracking — unified in one patient dashboard backed by Supabase PostgreSQL.</div>
-              <div class="tags"><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Tailwind</span><span class="tag">EmailJS</span><span class="tag">Vercel</span><span class="tag">Vite</span></div>
+              <div class="highlight"><i class="fa-solid fa-bolt"></i> Doctor appointment booking, medicine ordering, lab test scheduling, prescription uploads, order tracking — unified in one patient dashboard backed by Supabase SQL Server.</div>
+              <div class="tags"><span class="tag">Supabase</span><span class="tag">SQL Server</span><span class="tag">Tailwind</span><span class="tag">EmailJS</span><span class="tag">Vercel</span><span class="tag">Vite</span></div>
             </div>
             <div class="card-actions">
               <button class="action primary" onclick="openModal('pharma')"><i class="fa-solid fa-eye"></i> View Details</button>
@@ -528,7 +528,7 @@
             <div class="chip"><i class="fa-brands fa-python"></i> Python</div>
             <div class="chip"><i class="fa-solid fa-server"></i> FastAPI</div>
             <div class="chip"><i class="fa-solid fa-plug"></i> REST API</div>
-            <div class="chip"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+            <div class="chip"><i class="fa-solid fa-database"></i> SQL Server</div>
             <div class="chip"><i class="fa-solid fa-bolt"></i> Supabase</div>
           </div>
         </div>
@@ -745,7 +745,7 @@
     <div class="modal-badge-row">
       <span class="modal-badge">Analytics Engineering</span>
       <span class="modal-badge">2026</span>
-      <span class="modal-badge">Python · FastAPI · PostgreSQL · Power BI</span>
+      <span class="modal-badge">Python · FastAPI · SQL Server · Power BI</span>
     </div>
     <div class="modal-body">
       <div class="modal-section">
@@ -760,11 +760,12 @@
       <div class="modal-section">
         <h4>Five-Stage Pipeline</h4>
         <ul>
-          <li><i class="fa-solid fa-arrow-right"></i> <strong>Ingest —</strong> Python loads all 9 raw CSVs into SQLite (same code path targets Postgres/Supabase in production).</li>
+          <li><i class="fa-solid fa-arrow-right"></i> <strong>Ingest —</strong> Loads all 9 raw CSVs into SQL Server.</li>
           <li><i class="fa-solid fa-arrow-right"></i> <strong>Stage —</strong> SQL cleans and types every field: timestamps, prices, lat/long, lowercase cities, English category names.</li>
           <li><i class="fa-solid fa-arrow-right"></i> <strong>Model —</strong> Star schema: dim_customers, dim_sellers, dim_products, dim_dates + fact tables with GMV, delivery days, late-delivery flags.</li>
           <li><i class="fa-solid fa-arrow-right"></i> <strong>Analyze —</strong> Reusable SQL views answer common questions without re-joining raw tables.</li>
-          <li><i class="fa-solid fa-arrow-right"></i> <strong>Serve —</strong> Seller scores, RFM segments, cohort retention, and delivery-lane CSVs consumed by both API and Power BI.</li>
+          <li><i class="fa-solid fa-arrow-right"></i> <strong>Serve —</strong> Seller scores, RFM segments, cohort retention, and delivery-lane CSVs consumed by Fast API .</li>
+          <li><i class="fa-solid fa-arrow-right"></i> <strong>Serve —</strong> Build the attractive and professional dashboard use of Zebra BI and Power BI </li>
         </ul>
       </div>
       <div class="modal-section">
@@ -782,12 +783,8 @@
           <li><i class="fa-solid fa-server"></i> <strong>Dashboard API (port 8002)</strong> — sales summary, category/trend/payment breakdowns, geo sales map, and filter options for a front-end dashboard.</li>
         </ul>
       </div>
-      <div class="modal-section">
-        <h4>Production Upgrade Path</h4>
-        <p>Runs on SQLite locally (zero cloud credentials to clone), but ships dbt models with tests &amp; lineage, an Airflow DAG for scheduled orchestration, and a docker-compose Postgres setup — the same design maps directly onto a real production stack.</p>
-      </div>
       <div class="modal-tags">
-        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">SQLite</span><span class="tag">Power BI</span><span class="tag">Star Schema</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">RFM</span><span class="tag">Docker</span>
+        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQL Server</span><span class="tag">Power BI</span><span class="tag">Star Schema</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">ZebraBI</span><span class="tag">Excel</span>
       </div>
       <div class="modal-actions">
         <a class="ma-secondary" href="https://github.com/Tirth8292/Olist_Analysis" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Repository</a>
@@ -937,15 +934,15 @@
           <li><i class="fa-solid fa-flask"></i> <strong>Lab &amp; Healthcare Services:</strong> View available diagnostic labs and supported medical tests from the customer dashboard.</li>
           <li><i class="fa-solid fa-truck"></i> <strong>Order &amp; Delivery Tracking:</strong> Complete order workflow with checkout, delivery address, estimated delivery, status updates, and dedicated tracking.</li>
           <li><i class="fa-solid fa-user-doctor"></i> <strong>Doctor Management Portal:</strong> Doctors update their profile, availability, working hours, slot duration, and individual appointment slots.</li>
-          <li><i class="fa-solid fa-database"></i> <strong>Cloud Database &amp; Storage:</strong> Supabase PostgreSQL manages users, doctors, medicines, labs, carts, orders, appointments, and subscriptions; Supabase Storage handles prescription uploads.</li>
+          <li><i class="fa-solid fa-database"></i> <strong>Cloud Database &amp; Storage:</strong> Supabase SQL Server manages users, doctors, medicines, labs, carts, orders, appointments, and subscriptions; Supabase Storage handles prescription uploads.</li>
         </ul>
       </div>
       <div class="modal-section">
         <h4>Tech Stack</h4>
-        <p>HTML · CSS · JavaScript · Tailwind CSS · Vite · Supabase (PostgreSQL + Auth + Storage) · EmailJS · Git &amp; GitHub · Vercel</p>
+        <p>HTML · CSS · JavaScript · Tailwind CSS · Vite · Supabase (SQL Server + Auth + Storage) · EmailJS · Git &amp; GitHub · Vercel</p>
       </div>
       <div class="modal-tags">
-        <span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Tailwind CSS</span><span class="tag">Vite</span><span class="tag">EmailJS</span><span class="tag">Vercel</span><span class="tag">JavaScript</span>
+        <span class="tag">Supabase</span><span class="tag">SQL Server</span><span class="tag">Tailwind CSS</span><span class="tag">Vite</span><span class="tag">EmailJS</span><span class="tag">Vercel</span><span class="tag">JavaScript</span>
       </div>
       <div class="modal-actions">
         <a class="ma-primary" href="https://pharma-link-ten.vercel.app/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
